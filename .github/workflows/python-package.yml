@@ -35,4 +35,4 @@ jobs:
         pipenv run pylint password_mixin
     - name: Test with pytest
       run: |
-        pipenv run pylint password_mixin
+        pipenv run pytest -vvv
