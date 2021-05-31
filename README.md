@@ -2,7 +2,7 @@
 [![Python package](https://github.com/joegasewicz/password-mixin/actions/workflows/python-package.yml/badge.svg)](https://github.com/joegasewicz/password-mixin/actions/workflows/python-package.yml)
 
 # Password Mixin
-Mixin that add some useful methods to ORM objects
+Mixin that adds some useful methods to ORM objects
 
 Compatible with Python `3.5 >= 3.9`
 
