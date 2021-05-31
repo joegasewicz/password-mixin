@@ -1,4 +1,5 @@
 [![Upload Python Package](https://github.com/joegasewicz/password-mixin/actions/workflows/python-publish.yml/badge.svg)](https://github.com/joegasewicz/password-mixin/actions/workflows/python-publish.yml)
+[![Python package](https://github.com/joegasewicz/password-mixin/actions/workflows/python-package.yml/badge.svg)](https://github.com/joegasewicz/password-mixin/actions/workflows/python-package.yml)
 # Password Mixin
 Mixin that add some useful methods to ORM objects
 
@@ -18,7 +19,7 @@ Assign your application's secret value to `__hash_secret__`.
 from password_mixin import PasswordMixin
 from sqlalchemy import Model # or Django , Flask-Sqlalchemy... etc.
 
-class UserModel(OrmModel, PasswordMixon):
+class UserModel(OrmModel, PasswordMixon):[![Python package](https://github.com/joegasewicz/password-mixin/actions/workflows/python-package.yml/badge.svg)](https://github.com/joegasewicz/password-mixin/actions/workflows/python-package.yml)
     
     password = Column(String()) # you must have a `password`.
     
