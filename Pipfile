@@ -9,6 +9,3 @@ name = "pypi"
 werkzeug = "*"
 pytest = "*"
 pylint = "*"
-
-[requires]
-python_version = "3.9"
