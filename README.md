@@ -1,5 +1,5 @@
 # Password Mixin
-Mixin thats add some useful functions to ORM objects
+Mixin that add some useful methods to ORM objects
 
 # Install
 ```bash

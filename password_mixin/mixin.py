@@ -1,7 +1,7 @@
-import os
-from typing import Any
+"""
+PasswordMixin class
+"""
 from hashlib import pbkdf2_hmac
-import codecs
 
 from password_mixin.errors import PasswordMatchError, PasswordAttributeError
 
@@ -18,7 +18,9 @@ class PasswordMixin:
     def _get_password(self):
         password = getattr(self, "password", None)
         if not password:
-            raise PasswordAttributeError("password-mixin error: Your object must contain a valid password attribute")
+            raise PasswordAttributeError(
+                "password-mixin error: Your object must contain a valid password attribute",
+            )
         else:
             return password
 
