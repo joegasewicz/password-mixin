@@ -1,6 +1,8 @@
 # Password Mixin
 Mixin that add some useful methods to ORM objects
 
+Compatible with Python `3.5 >= 3.9`
+
 # Install
 ```bash
 pip install python-mixin
