@@ -1,3 +1,4 @@
+[![Upload Python Package](https://github.com/joegasewicz/password-mixin/actions/workflows/python-publish.yml/badge.svg)](https://github.com/joegasewicz/password-mixin/actions/workflows/python-publish.yml)
 # Password Mixin
 Mixin that add some useful methods to ORM objects
 
