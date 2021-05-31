@@ -24,7 +24,7 @@ setup(
         "Operating System :: OS Independent",
     ],
     long_description=long_description,
-    long_description_content_type="text/markdown".format,
+    long_description_content_type="text/markdown",
     url="https://github.com/joegasewicz/password-mixin",
     author="Joe Gasewicz",
     author_email="joegasewicz@gmail.com",
