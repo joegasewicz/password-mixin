@@ -5,7 +5,7 @@ Compatible with Python `3.5 >= 3.9`
 
 # Install
 ```bash
-pip install python-mixin
+pip install password-mixin
 ```
 
 ## Setup
