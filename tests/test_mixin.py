@@ -17,7 +17,7 @@ class TestPasswordMixin:
     @pytest.mark.parametrize(
         "password1,secret1,password2,secret2,should_pass",
         [
-            ("wizard123", "abc123", "wizard123", "1abc123", True),  # passwords match
+            ("wizard123", "abc123", "wizard123", "abc123", True),  # passwords match
             ("wizard123", "abc123", "wizard223", "abc123", False),  # secrets dont match
             ("wizard123", "abc123", "wizard1234", "abc123", False),  # passwords dont match
         ]
