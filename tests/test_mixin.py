@@ -2,7 +2,11 @@ import pytest
 from password_mixin import PasswordMixin, PasswordMatchError, PasswordAttributeError
 
 
-class TestModel(PasswordMixin):
+class MockOrmModel:
+    __tablename__ = "users"
+
+
+class TestModel(MockOrmModel, PasswordMixin):
     pass
 
 
