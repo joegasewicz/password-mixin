@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="password-mixin",
-    version="0.1.0",
+    version="0.1.2",
     description="Mixin that adds useful password methods to your Python objects",
     packages=["password_mixin"],
     py_modules=["password_mixin"],
