@@ -12,7 +12,7 @@ pip install password-mixin
 ```
 
 ## Setup
-first create your objects (of ORM model) and add a `__hash_secret__` meta field.
+first create your objects (or ORM model) and add a `__hash_secret__` meta field.
 Assign your application's secret value to `__hash_secret__`.
 
 ```python
