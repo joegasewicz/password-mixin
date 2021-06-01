@@ -13,8 +13,6 @@ class PasswordMixin:
 
     _salt: bytes
 
-    password_hash: str
-
     def _get_password(self):
         password = getattr(self, "password", None)
         if not password:
@@ -39,7 +37,7 @@ class PasswordMixin:
     def hash_password(self) -> None:
         password = self._get_password().encode("utf-8")
         hashed = self._gen_hash(password)
-        self.password_hash = f"{SHA_256}:{hashed}"
+        self.password = f"{SHA_256}:{hashed}"
 
     def check_password(self, password: str) -> bool:
         _, prev_hash = self.password.split(":")
