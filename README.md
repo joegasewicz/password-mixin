@@ -20,7 +20,7 @@ Assign your application's secret value to `__hash_secret__`.
 from password_mixin import PasswordMixin
 from sqlalchemy import Model # or Django , Flask-Sqlalchemy... etc.
 
-class UserModel(OrmModel, PasswordMixon):
+class UserModel(OrmModel, PasswordMixin):
     
     password = Column(String()) # you must have a `password`.
     
