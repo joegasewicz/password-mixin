@@ -36,14 +36,14 @@ class TestPasswordMixin:
         test_password.hash_password()
         test_password_two.hash_password()
         if should_pass:
-            assert test_password.password_hash == test_password_two.password_hash
+            assert test_password.password == test_password_two.password
         else:
-            assert test_password.password_hash != test_password_two.password_hash
+            assert test_password.password != test_password_two.password
 
     def test_check_password(self):
         test_password = TestModel()
         test_password.password = "wizard123"
         test_password.__hash_secret__ = "secret"
         test_password.hash_password()
-        test_password.password = test_password.password_hash
+        test_password.password = test_password.password
         assert test_password.check_password("wizard123") is True

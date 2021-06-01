@@ -13,7 +13,7 @@ class TestPasswordMatchError:
         test_password.password = "wizard123"
         test_password.__hash_secret__ = "secret"
         test_password.hash_password()
-        test_password.password = test_password.password_hash
+        test_password.password = test_password.password
         with pytest.raises(PasswordMatchError):
             test_password.check_password("wizard111")
 

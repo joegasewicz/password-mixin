@@ -7,3 +7,4 @@
 
 
 **Unrelease**
+- Remove salt 🪲 [Issue #5](https://github.com/joegasewicz/password-mixin/issues/5)

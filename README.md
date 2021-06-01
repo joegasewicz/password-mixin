@@ -56,3 +56,26 @@ try:
 except PasswordMatchError:
      # handle passwords don't match
 ```
+
+### Example with Flask & Flask-Sqlalchemy
+```python
+class UserModel(db.Model, PasswordMixin):
+
+    __tablename__ = "users"
+    __hash_secret__ = "wizard123"
+
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(100), nullable=False)
+    password = db.Column(db.String(100), nullable=False)
+
+    def create_user(self):
+        self.hash_password()
+        db.session.add(self)
+```
+Now, with the above setup you can run the following
+
+```python
+u = UserModel(email="test1@test.com", password="wizard123")
+u.create_user()
+db.session.commit()
+```
