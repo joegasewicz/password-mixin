@@ -38,9 +38,8 @@ class PasswordMixin:
 
     def hash_password(self) -> None:
         password = self._get_password().encode("utf-8")
-        salt = self._gen_salt().hex()
         hashed = self._gen_hash(password)
-        self.password_hash = f"{salt}:{hashed}"
+        self.password_hash = f"{SHA_256}:{hashed}"
 
     def check_password(self, password: str) -> bool:
         _, prev_hash = self.password.split(":")

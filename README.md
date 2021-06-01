@@ -31,7 +31,7 @@ class UserModel(OrmModel, PasswordMixin):
 ```
 
 ## Usage
-The password is saved as the following: `"<salt>:<hash>"`
+The password is saved as the following: `"<hash_name>:<hash>"`
 
 ### Password Hashing
 ```python
@@ -39,7 +39,7 @@ from password_mixin import PasswordAttributeError
 try:
     user = UserModel()
     user.password = "wizard123"
-    user.hash_password() # password is now 31616263313233:7ac5cf88e8c9d262b49af168d9c30e47f2945cc9c207f20af0a39f09aa04595e
+    user.hash_password() # password is now `sha256:7ac5cf88e8c9d262b49af168d9c30e47f2945cc9c207f20af0a39f09aa04595e`
     # Now you can save your user to your db etc.
 except PasswordAttributeError:
     # handle no password attribute
