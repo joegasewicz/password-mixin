@@ -4,7 +4,7 @@
 # Password Mixin
 Mixin that adds some useful methods to ORM objects
 
-Compatible with Python `3.5 >= 3.9`
+Compatible with Python `3.5 >`
 
 # Install
 ```bash
